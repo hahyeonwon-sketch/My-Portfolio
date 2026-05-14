@@ -172,3 +172,61 @@ body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--
 }
 
 .site-footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--border); color: #64748b; }
+
+
+
+/* --- 모바일 반응형 설정 (화면 너비가 768px 이하일 때) --- */
+@media (max-width: 768px) {
+  /* 1. 헤더 메뉴 정리 */
+  .header-content {
+    flex-direction: column; /* 로고와 메뉴를 세로로 */
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .nav {
+    gap: 10px;
+    flex-wrap: wrap; /* 메뉴가 많으면 다음 줄로 넘어가게 */
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 14px; /* 글자 크기 살짝 축소 */
+  }
+
+  /* 2. 메인 히어로 섹션 (소개 부분) 정리 */
+  .hero-grid {
+    grid-template-columns: 1fr !important; /* 가로 2줄에서 세로 1줄로 */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .profile-card {
+    margin: 0 auto; /* 프로필 카드 중앙 정렬 */
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem; /* 제목 크기 축소 */
+    line-height: 1.4;
+  }
+
+  /* 3. 경력/학습 기록 섹션 정리 */
+  .career-blog-grid {
+    grid-template-columns: 1fr !important; /* 가로 2줄에서 세로 1줄로 */
+  }
+
+  /* 4. 프로젝트 카드 정리 */
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  /* 5. 로고 폰트 크기 조정 */
+  .logo {
+    font-size: 1.2rem;
+  }
+}
