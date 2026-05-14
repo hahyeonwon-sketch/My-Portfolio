@@ -177,56 +177,61 @@ body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--
 
 /* --- 모바일 반응형 설정 (화면 너비가 768px 이하일 때) --- */
 @media (max-width: 768px) {
-  /* 1. 헤더 메뉴 정리 */
+  /* 1. 헤더 메뉴 정리 - 여백 최소화 */
   .header-content {
     flex-direction: column; /* 로고와 메뉴를 세로로 */
-    gap: 10px;
-    padding: 15px 0;
+    gap: 8px; /* 로고와 메뉴 사이 간격 살짝 줄임 */
+    padding: 10px 5px !important; /* 위아래 10px, 좌우 5px로 여백 최소화 */
   }
 
   .nav {
-    gap: 10px;
-    flex-wrap: wrap; /* 메뉴가 많으면 다음 줄로 넘어가게 */
+    gap: 5px !important; /* 메뉴 사이 간격을 5px로 좁힘 (한 줄 정렬 핵심) */
+    flex-wrap: nowrap !important; /* 절대 다음 줄로 넘어가지 않게 고정 */
     justify-content: center;
+    width: 100%;
   }
 
   .nav a {
-    font-size: 14px; /* 글자 크기 살짝 축소 */
+    font-size: 12px !important; /* 글자 크기를 12px로 줄여 공간 확보 */
+    letter-spacing: -0.5px; /* 글자 사이 간격을 좁혀서 더 촘촘하게 */
+    padding: 2px 0; /* 클릭 영역은 유지하되 위아래 여백 줄임 */
   }
 
   /* 2. 메인 히어로 섹션 (소개 부분) 정리 */
   .hero-grid {
-    grid-template-columns: 1fr !important; /* 가로 2줄에서 세로 1줄로 */
+    grid-template-columns: 1fr !important; 
     text-align: center;
-    gap: 30px;
+    gap: 20px; /* 간격 살짝 조정 */
   }
 
   .profile-card {
-    margin: 0 auto; /* 프로필 카드 중앙 정렬 */
+    margin: 0 auto;
     width: 100%;
   }
 
   .hero-text h2 {
-    font-size: 1.5rem; /* 제목 크기 축소 */
+    font-size: 1.3rem !important; /* 폰에서 너무 크면 깨지므로 살짝 더 축소 */
     line-height: 1.4;
+    word-break: keep-all; /* 단어가 어색하게 안 잘리게 함 */
   }
 
   /* 3. 경력/학습 기록 섹션 정리 */
   .career-blog-grid {
-    grid-template-columns: 1fr !important; /* 가로 2줄에서 세로 1줄로 */
+    grid-template-columns: 1fr !important;
+    gap: 20px;
   }
 
   /* 4. 프로젝트 카드 정리 */
   .project-card {
-    padding: 20px;
+    padding: 15px; /* 모바일에서는 여백을 조금 더 아낌 */
   }
 
   .project-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem !important;
   }
 
   /* 5. 로고 폰트 크기 조정 */
   .logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem !important;
   }
 }
