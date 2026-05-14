@@ -1,0 +1,174 @@
+:root {
+    --primary: #1e40af;
+    --accent: #3b82f6;
+    --bg: #f0f9ff;
+    --text: #1f2937;
+    --border: #bae6fd;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { width: min(1100px, 100% - 2rem); margin: 0 auto; }
+.section { padding: 60px 0; }
+
+/* Header */
+.site-header { position: sticky; top: 0; background: rgba(240, 249, 255, 0.95); backdrop-filter: blur(5px); z-index: 100; border-bottom: 1px solid var(--border); padding: 15px 0; }
+.site-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 아이콘과 텍스트 간격 최적화 */
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e40af; /* 기본 텍스트 색상 */
+}
+/* 별 모양 아이콘 크기 축소 */
+.logo-icon svg {
+    width: 20px; 
+    height: 20px;
+    color: #3b82f6; /* 아이콘 포인트 컬러 */
+    display: block;
+}
+
+/* '이름 그라데이션 효과 */
+.name-gradient {
+    background: linear-gradient(90deg, #60a5fa 0%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+.nav a { margin-left: 20px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+
+/* Hero */
+.hero-grid { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: center; }
+.profile-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(30, 64, 175, 0.1); border: 4px solid var(--border); }
+.avatar {
+    width: 140px;  /* 기존 120px에서 140px로 크기 확대 */
+    height: 140px; /* 가로 세로를 동일하게 맞춰 완벽한 원형 유지 */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #e0f2fe; /* 프레임이 커진 만큼 테두리 두께도 살짝 조절 */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center 10%; 
+    transition: transform 0.3s ease;
+}
+.avatar img:hover {
+    /* 마우스를 올렸을 때 살짝 확대되는 효과로 생동감 부여 */
+    transform: scale(1.05);
+}
+
+.profile-card ul { list-style: none; font-size: 0.9rem; }
+.hero-text h2 {
+    line-height: 1.4;
+    margin-bottom: 25px;
+    /* 강조하고 싶은 문구에 포인트 컬러 */
+    background: linear-gradient(to right, #1e40af, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.hero-text p {
+    color: #4b5563; /* 본문은 약간 부드러운 회색으로 조절 */
+    word-break: keep-all; /* 한글 단어가 잘리지 않게 설정 */
+}
+
+.hero-text strong {
+    color: #1e40af;
+    border-bottom: 2px solid #bae6fd; /* 키워드 아래에 얇은 강조선 */
+    padding-bottom: 2px;
+}
+
+/* Career & Blog - 높이 맞춤 핵심 */
+.career-blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch; }
+.column { display: flex; flex-direction: column; }
+.box-title { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+.career-box, .blog-box { background: white; padding: 30px; border-radius: 15px; border: 1px solid var(--border); flex: 1; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.career-box ul { list-style: none; }
+.career-box li { margin-bottom: 15px; }
+
+/* Buttons */
+.btn-group { display: flex; gap: 10px; margin-top: 20px; }
+.btn { padding: 12px 20px; border-radius: 25px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-align: center; }
+.blue-btn { background: #3b82f6; }
+.orange-btn { background: #f59e0b; }
+
+/* Skills Grid */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.skill-card { background: white; padding: 25px; border-radius: 15px; border: 1px solid var(--border); }
+.skill-card h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid #e0f2fe; padding-bottom: 5px; }
+.skill-card ul { list-style: inside circle; font-size: 0.95rem; }
+
+/* Project Card */
+.project-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px; /* 이미지처럼 큰 둥근 모서리 */
+    border: 1px solid #bae6fd;
+    box-shadow: 0 4px 20px rgba(30, 64, 175, 0.05);
+    margin-bottom: 50px;
+}
+
+.project-card h3 {
+    color: #3b82f6;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.project-date {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.sub-title {
+    color: #3b82f6; /* 파란색 강조 강조 */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.project-info ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.project-info li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* 연락처 스타일 (중앙 정렬 및 이모지 간격) */
+.contact-center {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact-details {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px; /* 이미지처럼 큰 둥근 모서리 */
+    border: 1px solid #bae6fd;
+    box-shadow: 0 4px 20px rgba(30, 64, 175, 0.05);
+    margin-bottom: 50px;
+}
+
+.contact-details a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.site-footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--border); color: #64748b; }

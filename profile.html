@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>풀스택 개발자 원하현의 포트폴리오</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-content">
+    <h1 class="logo">
+      <span class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-astroid">
+          <path d="M12.983 21.186a1 1 0 0 1-1.966 0 10 10 0 0 0-8.203-8.203 1 1 0 0 1 0-1.966 10 10 0 0 0 8.203-8.203 1 1 0 0 1 1.966 0 10 10 0 0 0 8.203 8.203 1 1 0 0 1 0 1.966 10 10 0 0 0-8.203 8.203"/>
+        </svg>
+      </span>
+      풀스택 개발자 <span class="name-gradient">원하현</span>의 포트폴리오
+    </h1>
+    <nav class="nav">
+      <a href="#about">소개</a>
+      <a href="#career">경력</a>
+      <a href="#skills">기술</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <!-- 소개 -->
+    <section id="about" class="section hero">
+      <div class="container hero-grid">
+        <div class="profile-card">
+          <div class="avatar">
+            <img src="hahyeon.jpeg" alt="프로필 사진" />
+          </div>
+          <ul>
+            <li><strong>🔹 이름 :</strong> 원하현</li>
+            <li><strong>🔹 GitHub :</strong> <a href="https://github.com/hahyeonwon-sketch" target="_blank">hahyeonwon-sketch</a></li>
+            <li><strong>🔹 자격증 :</strong> 정보처리기사 필기</li>
+          </ul>
+        </div>
+        <div class="hero-text">
+            <h2>"말하지 않는 불편함까지 찾아내어 기술로 해결합니다."</h2>
+            <p>
+                6년의 보육 현장에서 아이들의 작은 몸짓 하나로 요구사항을 파악하던 세심함은,<br>
+                이제 <strong>사용자의 사소한 로그 하나를 분석하여 UX를 개선하는 집요함</strong>으로 이어지고 있습니다.<br><br>
+            </p>
+            <p>
+                단순히 돌아가는 코드를 넘어, '왜 이 기능이 필요한가'를 끊임없이 질문하며<br>
+                동료와 사용자가 모두 신뢰할 수 있는 견고한 비즈니스 로직을 설계합니다.
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 경력 + 블로그 (카드 높이 맞춤 적용) -->
+    <section id="career" class="section career-blog-wrapper">
+      <div class="container career-blog-grid">
+        <div class="column">
+          <h2 class="box-title">경력 · 교육</h2>
+          <div class="career-box">
+            <ul>
+              <li><strong>2025.12 ~ 2026.06</strong><br />풀스택 개발자 양성 과정 수료 예정</li>
+              <li><strong>2022.06 ~ 2025.10</strong><br />롯데중앙연구소 내 직장어린이집 교사</li>
+              <li><strong>2019.03 ~ 2022.02</strong><br />한국표준과학연구원 내 직장어린이집 교사</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="box-title">학습 기록</h2>
+          <div class="blog-box">
+            <p>기술적 고민과 학습 과정을 벨로그와 네이버 블로그에 기록합니다.</p>
+            <div class="btn-group">
+              <a class="btn orange-btn" href="https://velog.io/@hahyeonwon" target="_blank">✍ 벨로그 (기술 정리)</a>
+              <a class="btn blue-btn" href="https://blog.naver.com/hahyeonwon" target="_blank">✍ 네이버 블로그 (학습 회고)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="box-title">기술 스택</h2>
+        <div class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="box-title">프로젝트</h2>
+        <div class="project-card">
+          <h3>[HomeTalk OnePass] 공동주거 관리 통합 플랫폼</h3>
+          <p class="project-date">2026.03.30 ~ 2026.05.15</p>
+          <div class="project-info">
+            <p><strong>주요 역할:</strong> 주차 관리 시스템 구현 및 데이터베이스 모델링/ 홈 화면 구현</p>
+            <p><strong>사용 기술:</strong> Java, Spring Boot, MySQL, Thymeleaf, Spring Security</p>
+            
+            <h4 class="sub-title">Problem</h4>
+            <p>기존 주거 관리 앱의 파편화와 비효율적인 처리 절차로 인한 사용자 불편 발생</p>
+            
+            <h4 class="sub-title">Solution</h4>
+            <ul>
+              <li>차량 번호 4자리 입력 시 즉각 조회가 가능한 비동기 퀵서치 로직 구현</li>
+              <li>Figma와 ERDCloud를 활용한 체계적인 UI 설계 및 DB 모델링</li>
+              <li>효율적인 데이터 조회 및 계층형 쿼리 활용</li>
+              <li>사용자 인터렉션에 따른 홈 화면 모듈별 동적 페이지 라우팅 구현</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 연락처 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="box-title">연락처</h2>
+            <div class="contact-details">
+                <p>📧 <strong>이메일:</strong> <a href="mailto:hahyeonwon@naver.com">hahyeonwon@naver.com</a></p>
+                <p>📞 <strong>연락처:</strong> 010-8390-6187</p>
+                <p>🏠 <strong>GitHub:</strong> <a href="https://github.com/hahyeonwon-sketch/My-Portfolio" target="_blank">hahyeonwon-sketch</a></p>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 Won Ha-hyeon. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>
